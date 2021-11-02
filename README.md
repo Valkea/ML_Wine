@@ -21,9 +21,6 @@ Also, this can be used to estimate the probability to get a quality rate for a g
 - https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv
 
 
-
-
-
 ## Running locally using python scripts
 
 Install pipenv
@@ -106,3 +103,9 @@ This will use the default input and out names. But this can be changed using the
 ```bash
 >> python model_training.py -s in.csv -d out.bin
 ```
+
+## Exploratory Data Analysis
+
+The model (model_classification.bin) available here, was created using the EDA jupyter notebook (EDA - Wine - Multiclass Classification.ipynb), but there is also a dedicated script (model_training.py) that can be used.
+
+The notebook was formated using some HTML, and the GitHub preview doesn't render all of them.

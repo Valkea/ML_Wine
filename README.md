@@ -167,3 +167,6 @@ Finally, you can open the project url (mine is https://ml-wine.herokuapp.com/inp
 ```bash
 >> heroku logs --tail --app ml-wine
 ```
+
+Finally, here is a great ressource to help deploying projects on Heroku:
+https://github.com/nindate/ml-zoomcamp-exercises/blob/main/how-to-use-heroku.md

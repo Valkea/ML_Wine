@@ -31,6 +31,7 @@ Also, this can be used to estimate the probability to get a quality rate for a g
 
 ## Running jupyter-notebook
 
+
 ```bash
 >> jupyter notebook
 or
@@ -39,7 +40,12 @@ or
 >> jupyter notebook "EDA - Wine - Multiclass Regression.ipynb"
 ```
 
-Both EDA lead to a different model, but the Regression EDA is basically a clone of the Classification EDA with some minor changes.
+This project focused on the Classification problem, then it was declined on the Regression problem.
+The two EDA's selected different models, but the Regression EDA is basically a clone of the Classification EDA with some minor changes (so you don't really need to read both).
+
+The model (model_classification.bin) served by Flask was created using the Classification EDA, but both models can be tested using the 'Load Models.ipynb' notebook.
+
+Also, the notebook was formated using some HTML, and the GitHub preview doesn't render all of them.
 
 ## Running locally using python scripts
 
@@ -129,11 +135,3 @@ This will use the default input and out names. But this can be changed using the
 ```bash
 >> python model_training.py -s in.csv -d out.bin
 ```
-
-## Exploratory Data Analysis
-
-The model (model_classification.bin) used in Flask was created using the EDA jupyter notebook (EDA - Wine - Multiclass Classification.ipynb), but there is also a dedicated script (model_training.py) that can be used to produce classification models.
-
-The Regression EDA and the Classification EDA lead to different models. I decided to serve the Classification one, but both models can be tested using the 'Load Models.ipynb' notebook.
-
-Alos, the notebook was formated using some HTML, and the GitHub preview doesn't render all of them.

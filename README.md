@@ -74,9 +74,11 @@ Stop with CTRL+C
 
 ### Tests
 One can check that the server is running by opening the following url:
-http://0.0.0.0:5000
+http://0.0.0.0:5000/input
 
-Once the wine-server is running, one can send a prediction request as follows:
+Then by submitting various physicochemical configurations, various results should be displayed.
+
+Alternatively a python script can be used to test from 'outside' of the Flask app.
 ```bash
 >> python wine_quality_client.py
 ```
@@ -98,7 +100,7 @@ This should return a wine-quality of 7
 
 Stop with CTRL+C
 
-Then one can run the same test steps as before... (open url and run wine_quality_client.py)
+Then one can run the same test steps as before... (open input url or run wine_quality_client.py)
 
 ### Pulling a Docker image from Docker-Hub
 
@@ -120,7 +122,7 @@ Then the command to start the docker is almost similar to the previous one:
 
 Stop with CTRL+C
 
-And once again, one can run the same test steps explained above... (open url and run wine_quality_client.py)
+And once again, one can run the same test steps explained above... (open input url or run wine_quality_client.py)
 
 
 ## Create a new model file from python script

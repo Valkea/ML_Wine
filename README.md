@@ -6,6 +6,7 @@ The goal is to gather some experience in various steps of ML pipeline.
 With this in mind, I made Explaratory Data Analysis on several datasets (such as Chess-games, Respiratory Syndroms, Allergy Syndroms), but they required more time than expected... 
 
 So, I finally selected a Wine dataset because it offered the possibility to train it as a Regression or as a Classification.
+(I developped both EDA, but the main one is the Classification EDA)
 
 ---
 
@@ -31,8 +32,14 @@ Also, this can be used to estimate the probability to get a quality rate for a g
 ## Running jupyter-notebook
 
 ```bash
+>> jupyter notebook
+or
 >> jupyter notebook "EDA - Wine - Multiclass Classification.ipynb"
+or
+>> jupyter notebook "EDA - Wine - Multiclass Regression.ipynb"
 ```
+
+Both EDA lead to a different model, but the Regression EDA is basically a clone of the Classification EDA with some minor changes.
 
 ## Running locally using python scripts
 
@@ -125,6 +132,8 @@ This will use the default input and out names. But this can be changed using the
 
 ## Exploratory Data Analysis
 
-The model (model_classification.bin) available here, was created using the EDA jupyter notebook (EDA - Wine - Multiclass Classification.ipynb), but there is also a dedicated script (model_training.py) that can be used.
+The model (model_classification.bin) used in Flask was created using the EDA jupyter notebook (EDA - Wine - Multiclass Classification.ipynb), but there is also a dedicated script (model_training.py) that can be used to produce classification models.
 
-The notebook was formated using some HTML, and the GitHub preview doesn't render all of them.
+The Regression EDA and the Classification EDA lead to different models. I decided to serve the Classification one, but both models can be tested using the 'Load Models.ipynb' notebook.
+
+Alos, the notebook was formated using some HTML, and the GitHub preview doesn't render all of them.

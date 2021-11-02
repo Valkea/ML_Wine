@@ -62,13 +62,13 @@ This should return a wine-quality of 7
 ### Building a Docker image
 
 ```bash
-docker build -t wine-quality-prediction .
+>> docker build -t wine-quality-prediction .
 ```
 
 ### Running a local Docker image
 
 ```bash
-docker run -it -p 5000:5000 wine-quality-prediction:latest
+>> docker run -it -p 5000:5000 wine-quality-prediction:latest
 ```
 
 Then one can run the same test steps as before... (open url and run wine_quality_client.py)
@@ -78,7 +78,7 @@ Then one can run the same test steps as before... (open url and run wine_quality
 I pushed a copy of my docker image on the Docker-hub, so one can pull it:
 
 ```bash
-docker pull valkea/wine-quality-prediction:latest
+>> docker pull valkea/wine-quality-prediction:latest
 ```
 
 But this command is optionnal, as running it (see below) will pull it if required.
@@ -88,7 +88,21 @@ But this command is optionnal, as running it (see below) will pull it if require
 Then the command to start the docker is almost similar to the previous one:
 
 ```bash
-docker run -it -p 5000:5000 valkea/wine-quality-prediction:latest
+>> docker run -it -p 5000:5000 valkea/wine-quality-prediction:latest
 ```
 
 And once again, one can run the same test steps explained above... (open url and run wine_quality_client.py)
+
+
+## Create a new model file from python script
+
+In order to create a new model .bin file, one can use the following command:
+
+```bash
+>> python model_training.py
+```
+This will use the default input and out names. But this can be changed using the -s (--source) and -d (--destination) parameters.
+
+```bash
+>> python model_training.py -s in.csv -d out.bin
+```

@@ -46,6 +46,8 @@ Start Flask development server:
 (venv) >> python wine_quality_server.py
 ```
 
+
+### Tests
 One can check that the server is running by opening the following url:
 http://0.0.0.0:5000
 
@@ -55,30 +57,38 @@ Once the wine-server is running, one can send a prediction request as follows:
 ```
 This should return a wine-quality of 7
 
-## Building a Docker
+## Docker
+
+### Building a Docker image
 
 ```bash
 docker build -t wine-quality-prediction .
 ```
 
-## Running locally using Docker
+### Running a local Docker image
 
 ```bash
 docker run -it -p 5000:5000 wine-quality-prediction:latest
 ```
 
-Then one can run the same verification steps as before... (open url and run wine_quality_client.py)
+Then one can run the same test steps as before... (open url and run wine_quality_client.py)
 
-## Pulling the Docker from Docker-Hub
+### Pulling a Docker image from Docker-Hub
 
-The Docker can also be gathered from my Docker-Hub account:
+I pushed a copy of my docker image on the Docker-hub, so one can pull it:
+
+```bash
+docker pull valkea/wine-quality-prediction:latest
+```
+
+But this command is optionnal, as running it (see below) will pull it if required.
+
+### Running a Docker image gathered from Docker-Hub
+
+Then the command to start the docker is almost similar to the previous one:
 
 ```bash
 docker run -it -p 5000:5000 valkea/wine-quality-prediction:latest
 ```
 
-Then the command to start the docker is almost similar as the previous one:
-
-```bash
-docker run -it -p 5000:5000 valkea/wine-quality-prediction:latest
-```
+And once again, one can run the same test steps explained above... (open url and run wine_quality_client.py)

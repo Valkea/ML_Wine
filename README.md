@@ -22,6 +22,12 @@ Also, this can be used to estimate the probability to get a quality rate for a g
 - https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv
 
 
+## Cloud deployement
+
+One can try the application here:
+https://ml-wine.herokuapp.com/input
+
+
 ## Clone repo
 
 ```bash

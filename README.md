@@ -21,6 +21,19 @@ Also, this can be used to estimate the probability to get a quality rate for a g
 - https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv
 
 
+## Clone repo
+
+```bash
+>> git clone https://github.com/Valkea/ML_Wine 
+>> cd ML_Wine
+```
+
+## Running jupyter-notebook
+
+```bash
+>> jupyter notebook "EDA - Wine - Multiclass Classification.ipynb"
+```
+
 ## Running locally using python scripts
 
 Install pipenv
@@ -42,6 +55,8 @@ Start Flask development server:
 ```bash
 (venv) >> python wine_quality_server.py
 ```
+
+Stop with CTRL+C
 
 
 ### Tests
@@ -68,6 +83,8 @@ This should return a wine-quality of 7
 >> docker run -it -p 5000:5000 wine-quality-prediction:latest
 ```
 
+Stop with CTRL+C
+
 Then one can run the same test steps as before... (open url and run wine_quality_client.py)
 
 ### Pulling a Docker image from Docker-Hub
@@ -87,6 +104,8 @@ Then the command to start the docker is almost similar to the previous one:
 ```bash
 >> docker run -it -p 5000:5000 valkea/wine-quality-prediction:latest
 ```
+
+Stop with CTRL+C
 
 And once again, one can run the same test steps explained above... (open url and run wine_quality_client.py)
 

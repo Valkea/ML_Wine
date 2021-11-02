@@ -22,7 +22,7 @@ Also, this can be used to estimate the probability to get a quality rate for a g
 - https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv
 
 
-## Cloud deployement
+## Cloud demo
 
 One can try the application here:
 https://ml-wine.herokuapp.com/input
@@ -142,4 +142,28 @@ This will use the default input and out names. But this can be changed using the
 
 ```bash
 >> python model_training.py -s in.csv -d out.bin
+```
+
+## Cloud deployement
+
+In order to deploy this project, I decided to use Heroku.
+
+So if you don't already have an account, you need to create one and to follow the process explained here: https://devcenter.heroku.com/articles/heroku-cli
+
+Once the Heroku CLI is configured, one can create a project using the following command (or their website):
+
+```bash
+>> heroku create ml-wine
+```
+
+Then, the project can be compiled, published and ran on Heroku, with:
+
+```bash
+>> heroku container:push web -a ml-wine
+>> heroku container:release web -a ml-wine
+```
+
+Finally, you can open the project url (mine is https://ml-wine.herokuapp.com/input), or check the logs using:
+```bash
+>> heroku logs --tail --app ml-wine
 ```

@@ -57,5 +57,28 @@ This should return a wine-quality of 7
 
 ## Building a Docker
 
+```bash
+docker build -t wine-quality-prediction .
+```
+
 ## Running locally using Docker
 
+```bash
+docker run -it -p 5000:5000 wine-quality-prediction:latest
+```
+
+Then one can run the same verification steps as before... (open url and run wine_quality_client.py)
+
+## Pulling the Docker from Docker-Hub
+
+The Docker can also be gathered from my Docker-Hub account:
+
+```bash
+docker run -it -p 5000:5000 valkea/wine-quality-prediction:latest
+```
+
+Then the command to start the docker is almost similar as the previous one:
+
+```bash
+docker run -it -p 5000:5000 valkea/wine-quality-prediction:latest
+```

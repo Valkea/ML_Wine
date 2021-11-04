@@ -64,6 +64,7 @@ Start the pipenv virtual environment:
 ```bash
 >> pipenv shell
 ```
+*(If it doesnt' work due to the Python 3.8 requirement, you can edit the Pipfile with you own version. I think it should work with any Python3 version has I didn't used any specific function or method.)*
 
 Install the dependencies:
 ```bash
